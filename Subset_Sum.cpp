@@ -16,6 +16,21 @@ public:
             }
         }
         return dp[a.size()][sum]==sum;
+
+        //Alternative
+        // vector <vector <int>> dp(a.size()+1,vector<int> (sum+1,0));
+        // for(int i=0;i<=a.size();i++){
+        //     dp[i][0]=1;
+        // }
+        // for(int i=1;i<=a.size();i++){
+        //     for(int j=1;j<=sum;j++){
+        //         if(a[i-1]<=j){
+        //             dp[i][j]=dp[i-1][j-a[i-1]];
+        //         }
+        //         dp[i][j]=max(dp[i][j],dp[i-1][j]);
+        //     }
+        // }
+        // return dp[a.size()][sum];
     }
 };
 
