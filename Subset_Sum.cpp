@@ -1,6 +1,8 @@
 #include<bits/stdc++.h> 
 using namespace std; 
 
+//knapsack type
+
 
 class Solution{   
 public:
@@ -18,6 +20,12 @@ public:
         return dp[a.size()][sum]==sum;
 
         //Alternative
+        // matrix
+        // | 1 0 0 0 0 0 0 0 
+        // | 1
+        // | 1   fill here according to condition
+        // | 1
+        // | 1
         // vector <vector <int>> dp(a.size()+1,vector<int> (sum+1,0));
         // for(int i=0;i<=a.size();i++){
         //     dp[i][0]=1;
